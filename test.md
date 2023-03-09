@@ -1,11 +1,13 @@
 # 1. GitHub 명령어
 - git init (맨 처음 프로젝스 올릴 시)
-- git add . ('.'은 전부란 뜻)
-- git status (업로드 파일 확인)
-- git commit -m "first commit" (git commit = 히스토리 만드는 것, "" = 히스토리 이름)
-- git remote add origin git@github.com:BaadAiim/javascript.git (이 위치로 주소와 연결)
+> git add . ('.'은 전부란 뜻)
+
+> git status (업로드 파일 확인)
+
+> git commit -m "first commit" (git commit = 히스토리 만드는 것, "" = 히스토리 이름)
+- git remote add origin git@github.com:BaadAiim/javascript.git (이 위치로 주소와 연결, 한번만 연결하면 됨)
 - git emote -v (연결확인)
-- git push origin master (보내기)
+> git push origin master (보내기)
 
 # 2. HTML과 CSS, Java의 상관관계
 - 브라우저는 HTML을 연다.
