@@ -50,7 +50,7 @@ string = (처음부터 끝까지 모두 글자로 이뤄져있는 것, 글자로
 > 변수명 선언 중 언어마다 다른 띄어쓰기 사용법(가독성용, 변수명에는 띄어쓰기 사용 못함)
 - Javascript
 ```javascript
-const a = myName
+const myName = a
 ```
     a = my name
 
@@ -59,7 +59,7 @@ const a = myName
 ```python
 const my_name = a
         or
-myName = a
+    myName = a
 ```
      a = my name
 
@@ -76,4 +76,18 @@ console.log("your new name is " + myName);
 ```
 
 결과값 = your new name is badaim
+
+# 5. True, False, Null, Undefined
+
+> ```true``` = 1(켜져있음)
+
+> ```false``` = 0(꺼져있음)
+
+> ```null``` = 비어있음(없다)
+
+> ```undefined``` = 정의되지 않음(변수값은 존재하지만 값은 정의되지 않음)
+
+- 이 4가지는 문자가 아닌 데이터 타입이다
+
+# 6. Arrays
 
