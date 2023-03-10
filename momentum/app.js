@@ -1,11 +1,8 @@
-const mon = "mon";
-const tue = "tue";
-const wed = "wed";
-const thu = "thu";
-const fri = "fri";
-const sat = "sat";
-const sun = "sun";
+const player = {
+    name: "badaim",
+    points: 10,
+    fat: true,
+};
 
-const daysOfWeek = [mon , tue , wed , thu , fri , sat , sun];
-
-console.log(daysOfWeek);
+console.log(player)
+console.log(player.name)
