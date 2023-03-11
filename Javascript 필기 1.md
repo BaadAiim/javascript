@@ -110,7 +110,7 @@ const daysOfWeek = [mon , tue , wed , thu , fri , sat , sun];
 console.log(daysOfWeek);
 ```
 
-> 또한, ```array```안의 번호를 찾을 수 있으며 ```console.log()```의 괄호 안에 []을 이용하여 순서를 표시함(순서는 0부터 시작함)
+> 또한, ```array```안의 순서를 찾을 수 있으며 ```console.log()```의 괄호 안에 []을 이용하여 순서를 표시함(순서는 0부터 시작함)
 
  
 - ex) 
@@ -148,6 +148,29 @@ const daysOfWeek = [mon , tue , wed , thu , fri , sat , sun];
 
 const daysOfWeek = [mon , tue , wed , thu , fri , sat , sun, "일요일"];
 ```
+
+> 마지막으로 특정 순서의 값을 바꿀 수 있음
+
+- ex) 
+```javascript
+const daysOfWeek = [mon , tue , wed , thu , fri , sat , sun, "일요일"];
+
+daysOfWeek[0] = "월요일"
+```
+
+- 결과값
+
+```javascript
+
+const daysOfWeek = [mon , tue , wed , thu , fri , sat , "일요일"];
+ 
+->
+
+const daysOfWeek = ["월요일" , tue , wed , thu , fri , sat , sun, "일요일"];
+```
+
+
+
 
 # 7. Objects
 
@@ -254,4 +277,98 @@ console.log(player) - 2번
 
 2번 = {name: "badaim", ```points: 25```, fat: true}
 
-# 8.
+# 8. Funcctions
+
+> ```function```은 반복할 구역을 지정함
+
+- ```function``` 이후 원하는 이름 ex)a 을 적은 후 {}를 이용, {}안에 반복하고자 하는 내용을 작성
+
+- ex) 
+
+```javascript
+function a() {
+    console.log("hello!")
+}
+
+a();
+a();
+a();
+```
+
+- 결과값 
+
+    = hello! hello! hello!
+
+> 응용방법
+
+- ex) 
+
+```javascript
+function min(일, 이) {
+    console.log(일 + 이);
+}
+
+min(1, 2);
+```
+
+- 결과값 
+
+    = 3
+
+- ex) 
+
+```javascript
+function min(일) {
+    console.log(일);
+}
+
+min(1, 2, 3, 4, 5, 6);
+```
+
+- 결과값
+
+    = 1
+
+- ex)
+
+```javascript
+function min(일) {
+    console.log(일 - 5);
+}
+
+min(1, 2, 3, 4, 5, 6);
+```
+
+- 결과값
+
+    = -4
+
+> 단, 이런 경우는 불가능함
+
+- ex)
+
+```javascript
+function min(일) {
+    console.log(일 - 5);
+}
+
+consloe.log(일)
+
+min(1, 2, 3, 4, 5, 6);
+```
+
+- 이유는 ```{}```안의 값만 적용되기 때문임, 즉 ```{}```밖의 ```console.log(일)```은 정의된 값이 없음
+
+> 마지막으로 ```const``` 안에 ```function```을 사용할 때 순서를 바꿔서 작성해야함
+
+- ex)
+
+```javascript
+const min = {
+    max: function (일, 이) {
+        console.log(일, 이);
+    };
+};
+```
+
+- ```function max(일, 이)```가 아닌 ```max: function(일, 이)```임
