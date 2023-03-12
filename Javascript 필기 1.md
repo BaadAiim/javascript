@@ -372,3 +372,97 @@ const min = {
 ```
 
 - ```function max(일, 이)```가 아닌 ```max: function(일, 이)```임
+
+# 8.1 Return
+
+> ```return```은 ()가 필요없음
+
+> ```return```은 값을 계산 후 반환 값을 저장하여 가지고 있음
+
+> 주된 사용방법으로는 사용자가 데이터 값을 주게 되면 그 값을 계산한 후 반환해줌
+
+> ```function```안에```return```이 있으면 모든 계산의 마지막이고 보여주는 값임(이유는 계산하여 값을 반환해주기 때문)
+
+- ex) 1번
+```javascript
+const age = 96;
+
+function calculateKrAge(ageOfForeigner){
+    return ageOfForeigner + 2;
+    
+}
+
+const krAge = calculateKrAge(age);
+
+console.log(krAge);
+```
+
+- 결과값 
+
+    = 98
+
+- ex) 2번
+```javascript
+const age = 96;
+
+function calculateKrAge(ageOfForeigner){
+    ageOfForeigner + 2;
+    return "hello"
+}
+
+const krAge = calculateKrAge(age);
+
+console.log(krAge);
+```
+
+- 결과값 
+
+    = hello
+
+응용방법
+
+- ex)
+```javascript
+const calculator = {
+    plus: function (a, b){
+        return a+b;
+    },
+    minus: function (a, b){
+        return a-b;
+    },
+    times: function (a, b){
+        return a*b;
+    },
+    divide: function (a, b){
+        return a/b;
+    },
+    power: function (a, b){
+        return a**b;
+    }
+}
+
+const plusResult = calculator.plus(2,3)
+const minusResult = calculator.minus(plusResult,10)
+const timesResult = calculator.times(10,minusResult)
+const multiResult = calculator.divide(timesResult,plusResult)
+const powerResult = calculator.power(multiResult,minusResult)
+```
+
+- 결과값(콘솔창에 직접 입력)
+
+    = plusResult
+    > 5
+
+    = minusResult
+    > -5
+
+    = timesResult
+    > -50
+
+    = divideResult
+    > -10
+
+    = powerResult
+    > -0.000009999999999999999
+
+    # 8.2 Return
