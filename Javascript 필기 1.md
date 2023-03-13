@@ -383,6 +383,8 @@ const min = {
 
 > ```function```안에```return```이 있으면 모든 계산의 마지막이고 보여주는 값임(이유는 계산하여 값을 반환해주기 때문)
 
+> 단, ```return```을 사용하기 전 ```console.log```를 작성하면 가능함(서순)
+
 - ex) 1번
 ```javascript
 const age = 96;
@@ -465,4 +467,39 @@ const powerResult = calculator.power(multiResult,minusResult)
     = powerResult
     > -0.000009999999999999999
 
-    # 8.2 Return
+    # 9. Conditional(조건문)
+
+>  ```prompt```는 사용자에게 message(질문)을 하여 답을 얻을 때 사용, message(질문)는 반드시 string이어야함
+
+- ex)
+```javascript
+const age = prompt("How old are you");
+```
+
+> ```typeof```는 변수값의 타입을 알 수 있게 해줌
+
+- ex)
+```javascript
+const age = prompt("How old are you");
+
+console.log(typeof age);
+```
+
+- 결과값
+
+    string
+
+> ```parseInt```는 string를 number(숫자)로 변환할 때 사용
+
+- ex)
+```javascript
+const age = parseInt(prompt("How old are you"));
+
+console.log(age);
+```
+
+- 결과값 
+
+    "15" -> 15
+
+    "밥" -> NaN
