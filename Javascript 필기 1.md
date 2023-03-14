@@ -503,3 +503,38 @@ console.log(age);
     "15" -> 15
 
     "밥" -> NaN
+
+> ```isNaN```은 값이 숫자인지 아닌지를 'True' or 'False'로 알려줌(이렇게 'True' or 'False'만 값을 가지고 있는 유형을 'Boolean'이라함)
+
+- ex)
+```javascript
+const age = parseInt(prompt("How old are you"));
+
+console.log(isNaN(age));
+```
+
+- 결과값 
+
+    Ture -> 제공된 값이 NaN이다
+
+> 이를 통해 ```Conditional```를 이용할 수 있음, ```conditional```은 'True' or 'False'만 값을 가지고 있는 유형인 'Boolean'를 통해 만듦
+
+- ex) 조건을 추가하기 전
+```javascript
+const age = parseInt(prompt("How old are you"));
+
+if(isNaN(age)) {
+    console.log("Please write a number");
+}
+```
+
+- ex) 조건을 추가한 후
+```javascript
+const age = parseInt(prompt("How old are you"));
+
+if(isNaN(age)) {
+    console.log("Please write a number"); -> True
+} else {
+    console.log("Thank you for writing your age") -> False
+}
+```
