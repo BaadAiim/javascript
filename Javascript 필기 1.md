@@ -535,6 +535,70 @@ const age = parseInt(prompt("How old are you"));
 if(isNaN(age)) {
     console.log("Please write a number"); -> True
 } else {
-    console.log("Thank you for writing your age") -> False
+    console.log("Thank you for writing your age"); -> False
 }
 ```
+
+> 또한, else 문장에 if를 추가하여 계속해서 조건을 추가하고 값을 분별할 수 있음
+
+- ex)
+```javascript
+const age = parseInt(prompt("How old are you"));
+
+if(isNaN(age)) {
+    console.log("Please write a number");
+} else if(age < 18 ) {
+    console.log("You are too young");
+    else {
+        console.log("You can drink");
+    }
+}
+```
+
+> 조건을 넣을 때 ```&&```는 and(그리고)이다
+
+> ```||```는 or(또는)이다
+
+> ```==```는 동등연산자(값만 같으면 True)이다
+
+> ```===``` 일치연산자(값과 값의 종류가 모두 같으면 true)이다
+
+> ```!==```는 조건의 값이 아니라면?이다.
+
+- ex)
+
+true || true === true
+
+false || true === true
+
+true || false === true
+
+false || false === false
+
+
+true && true === true
+
+false && true === false
+
+true && false === false
+
+false && false === false
+
+- ex)
+
+```javascript
+const age = parseInt(prompt("How old are you"));
+
+if(isNaN(age) || age < 0) {
+    console.log("Please write a real positive number");
+    } else if(age < 18 ) {
+    console.log("You are too young");
+    } else if(age >= 18 && age <= 50) {
+    console.log("You can drink"); 
+    } else if (age >= 50 && age <= 80) {
+    console.log("You should exercise"); 
+    } else if (age > 80) {
+    console.log("You can do whatever you want.") ;
+    }
+```
+
