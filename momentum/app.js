@@ -1,1 +1,3 @@
-document.title = "I Love It"
+const title = document.getElementById("title");
+
+console.dir(title)
