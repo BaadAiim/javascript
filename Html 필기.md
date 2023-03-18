@@ -149,3 +149,26 @@ const title = document.getElementById("hello");
 - 결과값
 
 ex1와 ex2 둘 다 같다.
+
+# 6. Events
+
+> 모든 event들을 Javascriptsms Listen할 수 있다.
+
+> event란 예를 들어 마우스의 행동, 클릭, 또는 Wifi 변경 등 값이 변화하거나 영향을 주거나 하는 것이다.
+
+> event를 추가하기 위해서는 ```addEventListener()```이라는 것을 사용해야함. 또한, 어떤 event를 Listen하고 싶은지도 지정해줘야함.
+
+- ex) - Click event
+```javascript
+const title = document.querySelector(".hello h1");
+
+function handleTitleClick(){
+    console.log("title was clicked");
+}
+
+title.addEventListener("click", handleTitleClick); - "click"이 어떤 event를 Listen할 것인지 지정한 것이다.
+```
+
+- 결과값 
+
+title was clicked - 숫자 추가되며 카운트 된다.
