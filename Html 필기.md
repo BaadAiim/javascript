@@ -150,7 +150,7 @@ const title = document.getElementById("hello");
 
 ex1와 ex2 둘 다 같다.
 
-# 6. Events
+# 6.1 Events
 
 > 모든 event들을 Javascriptsms Listen할 수 있다.
 
@@ -172,3 +172,42 @@ title.addEventListener("click", handleTitleClick); - "click"이 어떤 event를 
 - 결과값 
 
 title was clicked - 숫자 추가되며 카운트 된다.
+
+# 6.2 Events
+
+> ```dir```을 통해 볼 수 있는 property(성질) 중 앞에 'on'이 붙어 있다면 그것은 event Listner이다.
+
+> event Listner 중 ```mouseenter```은 마우스가 올라갈 때를 의미한다.
+
+> event Listner 중 ```mouseleave```은 마우스가 내려갈 때를 의미한다.
+
+> ```title.innerText = "";```은 글씨를 넣을 때 사용한다.
+
+> ```title.style.color = "";```은 글씨의 색깔을 바꿀 때 사용한다.
+ex)
+```javascript
+const title = document.querySelector(".hello h1");
+
+function handle () {
+    title.style.color = "blue";
+}
+
+function handle2 () {
+    title.innerText = "마우스는 여기있다";
+}
+
+function handle3 () {
+    title.innerText = "마우스는 사라졌다";
+}
+
+title.addEventListener("click", handle);
+title.addEventListener("mouseenter", handle2) ;
+title.addEventListener("mouseleave", handle3) ;
+```
+
+- 결과값
+
+마우스는 여기있다. -----------> 마우스가 올라갈 때
+마우스는 사라졌다. -----------> 마우스가 내려갈 때
+
+(마우스를 클릭하면 blue(파란색)이 나온다)
