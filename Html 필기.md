@@ -24,6 +24,8 @@
 
 - 결과값는 ```I Love It```으로 나온다
 
+> ```document```로 불러올 수 있는 것은 body, head, title과 같은 것들만 가능하다(중요하기 때문)
+
 # 2. Dir
 
 > ```dir```은 element를 더 자세하게 보여준다
@@ -212,3 +214,4 @@ title.addEventListener("mouseleave", handle3) ;
 마우스는 사라졌다. -----------> 마우스가 내려갈 때
 
 (마우스를 클릭하면 blue(파란색)이 나온다)
+
