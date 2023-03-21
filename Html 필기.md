@@ -215,3 +215,78 @@ title.addEventListener("mouseleave", handle3) ;
 
 (마우스를 클릭하면 blue(파란색)이 나온다)
 
+# 6.3 Events
+
+> ```title.addEventListener();```과 같은 방법 대신
+앞에 'on'을 붙혀 사용할 수 있다.
+
+ex) 
+```javascript
+const title = document.querySelector(".hello h1");
+
+function handle () {
+    title.style.color = "blue";
+}
+
+function handle2 () {
+    title.innerText = "마우스는 여기있다";
+}
+
+function handle3 () {
+    title.innerText = "마우스는 사라졌다";
+}
+
+title.onclick = handle;
+title.onmouseenter = handle2;
+title.onmouseleave = handle3;
+```
+
+> ```window```에 관한 ```event```도 존재한다.
+
+> ```window```의 사이즈를 줄이는 ```event```는 ```resize```이다.
+
+ex)
+```javascript
+
+function windowhandle (){
+    document.body.backgroundColor = "Ren";
+}
+
+window.addEventListener("resize" , windowhandle);
+```
+
+- 결과값
+
+window 사이즈를 바꿀 시 backgroundcolor이 빨간 색으로 바뀐다.
+
+> ```resize```처럼 똑같이 사용할 수 있는 ```event``` 중 wifi와 관련있는 ```offline```과 ```online```하고 복사하는 ```copy``` 등이 있다.
+
+# 7. currentColor, newColor
+
+> ```currentColor```은 getter(획득자)이며, ```newColor```은 setter(설정자)입니다.
+
+> ```currentColor```은 최근 color값을 복사하는 역할을 한다. 그렇기에 ```const```로 선언하는 것이 적합하다.
+
+> ```newColor```은 변수에 대입된 색상값을 최종적으로 할당하는 역할을 한다. 그리고 값이 변경될 수 있다는 것을 염두에 두기 위해 ```let```으로 선언하는 것이 적합하다.
+
+ex)
+```javascript
+const h1 = document.querySelector(".hello h1");
+
+function handle () {
+    const currentColor = h1.style.color;
+    let NewColor;
+    if(currentColor === "blue") {
+        NewColor = "red";
+    }   else {
+        NewColor = "blue";
+    }
+    h1.style.color = NewColor;
+}
+
+h1.addEventListener("click", handle);
+```
+
+- 결과값
+
+클릭할 때 마다 색깔이 blue와 red로 바뀐다.
