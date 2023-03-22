@@ -602,3 +602,97 @@ if(isNaN(age) || age < 0) {
     }
 ```
 
+# 10. toggle
+
+> CSS 필기 1. Style 오류 부분에서의 문제를 해결하기 위해 사용하는 것이다.
+
+```javascript
+const h1 = document.querySelector(".hello h1");
+
+function handle () {
+    const clickhandel = "active";
+    if(h1.className === clickhandel) {
+        h1.className = "";
+    } else {
+        h1.className = clickhandel;         
+    }
+}
+
+h1.addEventListener("click", handle);
+```
+
+> 이렇게 ```javascript```에서 ```className```을 사용하는 것은 좋지 않음.
+
+> ```className```은 모든걸 교체하기 때문에 이를 대신하여 사용하는 게 ```classList```이며 그 뒤에 ```contains```이라는 ```function```을 사용함.
+
+> ```classList```는 ```element```의 ```class``` 내용물을 조작하는 것을 허용한다.
+
+> ```contains```은 사용자가 명시한 ```class```에 ```HTML element```의 ```class```에 포함되어 있는지 말해주는 것이다.
+
+> ```remove```와 ```add```도 있으며 뜻 그대로 제거와 추가이다.
+
+ex)
+```javascript
+const h1 = document.querySelector(".hello h1");
+
+function handle () {
+    const clickhandel = "active";
+    if(h1.classList.contains(clickhandel)) {
+        h1.classList.remove(clickhandel);
+    } else {
+        h1.classList.add(clickhandel);         
+    }
+}
+
+h1.addEventListener("click", handle);
+```
+
+- 결과값 
+
+클릭 전 -> <h1 class="sexy-font">Grab me!</h1>
+
+클릭 후 -> <h1 class="sexy-font active">Grab me!</h1>
+
+> 하지만 ```javascript```에서 하나의 ```function```을 통해 간결하게 해결할 수 있는데 그것이 ```toggle```이다.
+
+> ```toggle``` 사용 시 ```const```를 사용하여 변수를 지정할 필요는 없다. 그 이유는 ```"active"```라는 ```string```를 반복하는 순간, ```constant```를 생성할 순간이기 때문이다.
+
+> ```toggle```은 지정한 곳의 ```classList```에 ```active class```가 이미 있는지 확인해서 만약 있다면, ```toggle```이 ```active```를 제거해준다.
+
+> 정반대로 ```classList```에 ```active class```가 존재하지 않는다면, ```toggle```은 ```active```를 ```classList```에 추가를 해줄 것이다.
+
+> 예시로는 스마트폰에 달린 한번 누르면 스크린을 잠그고 다시 한번 누르면 스크린을 켜주는 버튼과도 같다. = ```toggle```
+
+ex1)
+```javascript
+const h1 = document.querySelector(".hello h1");
+
+function handle () {
+    const clickhandel = "active";
+    if(h1.classList.contains(clickhandel)) {
+        h1.classList.remove(clickhandel);
+    } else {
+        h1.classList.add(clickhandel);         
+    }
+}
+
+h1.addEventListener("click", handle);
+```
+
+ex2)
+ex)
+```javascript
+const h1 = document.querySelector(".hello h1");
+
+function handle () {
+    h1.classList.toggle("active");
+}
+
+h1.addEventListener("click", handle);
+```
+
+- 결과값
+
+클릭 전 -> <h1 class="sexy-font">Grab me!</h1>
+
+클릭 후 -> <h1 class="sexy-font active">Grab me!</h1>
