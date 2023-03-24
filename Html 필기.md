@@ -290,3 +290,71 @@ h1.addEventListener("click", handle);
 - 결과값
 
 클릭할 때 마다 색깔이 blue와 red로 바뀐다.
+
+# 8. Submit이란?
+
+> ```submit``` 은 일반적으로 웹사이트에서 양식(form)에 작성된 데이터(입력된 값)를 서버측으로 전송하는 것을 말한다. 보통은 버튼이나 링크 형태로 제공되며, 데이터를 전송하기 전에 서버측에서 유효성 검사 등의 작업을 거친다. 예를 들어, 글을 작성할 때 Submit 버튼을 누르면 작성한 글이 서버측으로 전송되어 글이 저장되거나 게시될 수 있다.
+
+# 9. 그 외의 것
+
+> ```input``` 안에 ```required```(필수입력 항목)을 넣을 수 있다.
+
+> ```input``` 안에 ```maxlength="ㅁㅁ"```를 통해 글자수를 ㅁㅁ로 조절할 수 있다.
+
+> ```input```의 유효성 검사를 작동시키기 위해서는 ```input```이 ```form```안에 있어야 함.
+
+ex1)
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Momentum App</title>
+</head>
+<body>
+  <div id="login-form"> <-----------------------
+    <input 
+    required 
+    maxlength="15"
+    type="text" 
+    placeholder="What is your name?" />
+    <button> Log In</button>
+  </div>                <-----------------------
+  <script src="app.js"></script>
+</body>
+</html>
+```
+
+ex2)
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Momentum App</title>
+</head>
+<body>
+  <form id="login-form">    <-----------------------
+    <input 
+    required 
+    maxlength="15"
+    type="text" 
+    placeholder="What is your name?" />
+    <button> Log In</button>
+  </form>                   <-----------------------
+  <script src="app.js"></script>
+</body>
+</html>
+```
+
+> ```form```를 통해 ```input```의 유효성 검사가 작동함.
+
+> 하지만 ```input```안에 있는 ```button```을 누르거나 ```type```이 ```submit```인 ```input```을 클릭하면 작성한 ```form```이 ```subbmit```된다.
+
+

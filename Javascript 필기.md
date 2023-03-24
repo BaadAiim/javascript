@@ -696,3 +696,7 @@ h1.addEventListener("click", handle);
 클릭 전 -> <h1 class="sexy-font">Grab me!</h1>
 
 클릭 후 -> <h1 class="sexy-font active">Grab me!</h1>
+
+# 11. 그 외의 것
+
+> ```ㅁㅁㅁ.length```는 ㅁㅁㅁ의 길이를 숫자로 보여준다.
