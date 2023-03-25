@@ -697,6 +697,29 @@ h1.addEventListener("click", handle);
 
 클릭 후 -> <h1 class="sexy-font active">Grab me!</h1>
 
+# 11. PreventDefault
+
+>```preventDefault()```는 이벤트가 발생했을 때 브라우저의 기본 동작을 막는 역할을 한다.
+
+> 사용법은 ```function ㅁㅁㅁㅁㅁ()```에서 ()괄호안에 ```event``` 문자 그대로 작성한 후 ```event.preventDefault();```를 작성한다.
+
+ex)
+```javascript
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+
+function submithandle(event) {
+    event.preventDefault();
+    console.log(loginInput.value);
+}
+
+loginForm.addEventListener("submit", submithandle);
+```
+
+- 결과값
+
+사이트 페이지에서 작성한 내용을 결과값으로 제출함.
+
 # 11. 그 외의 것
 
 > ```ㅁㅁㅁ.length```는 ㅁㅁㅁ의 길이를 숫자로 보여준다.
