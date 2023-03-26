@@ -723,3 +723,5 @@ loginForm.addEventListener("submit", submithandle);
 # 11. 그 외의 것
 
 > ```ㅁㅁㅁ.length```는 ㅁㅁㅁ의 길이를 숫자로 보여준다.
+
+> ```addEventListener``` 안에 있는 함수는 직접 실행하지 않는다. 브라우저를 통해 실행한다. 또한, 브라우저는 실행만 시켜주는 것이 아닌 ```event```에 대한 정보도 담아준다.
