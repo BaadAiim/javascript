@@ -214,3 +214,16 @@ h1.addEventListener("click", handle);
 클릭 전 -> <h1 class="sexy-font">Grab me!</h1>
 
 클릭 후 -> <h1 class="sexy-font active">Grab me!</h1>
+
+# 2. Hidden(숨기기)
+
+> ```form```을 숨길 때 사용한다.
+
+ex)
+```CSS
+.hidden {
+    display: none;
+}
+```
+
+> 이후 ```Html```에서 ```classname```에 ```.hidden```을 추가하면 된다.

@@ -1,15 +1,15 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const link = document.querySelector("a");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_USERNAME = "hidden";
 
 function submithandle(event) {
     event.preventDefault();
-    console.log(loginInput.value);
-}
-
-function clickhandle() {
-    alert("Go To GitHub");
+    loginForm.classList.add(HIDDEN_USERNAME);
+    const username = loginInput.value;
+    greeting.innerText = `Hello ${username} you can do it`;
+    greeting.classList.remove(HIDDEN_USERNAME);
 }
 
 loginForm.addEventListener("submit", submithandle);
-link.addEventListener("click", clickhandle);

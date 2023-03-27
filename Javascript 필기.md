@@ -725,3 +725,26 @@ loginForm.addEventListener("submit", submithandle);
 > ```ㅁㅁㅁ.length```는 ㅁㅁㅁ의 길이를 숫자로 보여준다.
 
 > ```addEventListener``` 안에 있는 함수는 직접 실행하지 않는다. 브라우저를 통해 실행한다. 또한, 브라우저는 실행만 시켜주는 것이 아닌 ```event```에 대한 정보도 담아준다.
+
+# 12. 관습
+
+> ```const```를 통해 변수선언을 진행할 때 일반적으로 ```string```만 포함된 변수는 대문자로 표기하고 ```string```을 저장하고 싶을 때 사용한다. 또한, 중요한 정보를 담은게 아니라서 대문자로 작성한다.
+
+ex)
+```javascript
+const HIDDEN_USERNAME = "hidden";
+```
+
+> 빽팁(`)를 이용하여 ```string``` 두 개를 합칠 수 있다.(변수 포함)
+
+> 처음과 끝을 빽팁으로 가두고 변수 앞에는 ```$```를 표시한 수 ```{}```안에 변수를 넣는다.
+
+ex)
+```javascript
+greeting.innerText = `Hello ${username} you can do it`; ----------------> 1번
+greeting.innerText = "Hello " + username + " you can do it"; -----------> 2번
+```
+
+- 결과값
+
+둘 다 똑같이 나온다.
