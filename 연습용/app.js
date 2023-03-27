@@ -1,7 +1,6 @@
 const link = document.querySelector("a");
 const link2 = document.querySelector("b");
 const loginForm = document.querySelector("#폼");
-const loginForm2 = document.querySelector("#폼2");
 
 function handle1() {
     alert("Go To Git Hub");
