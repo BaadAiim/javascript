@@ -734,6 +734,8 @@ loginForm.addEventListener("submit", submithandle);
 
 > ```localStorage.removeliem("삭제하고자 하는 내용이 들어있는 항목");```
 
+> 저장한 값들을 확인하는 법은 F12로 console창을 띄운 후 Application에서 확인할 수 있다.
+
 ex)
 ```javascript
 const loginForm = document.querySelector("#login-form");
@@ -759,6 +761,8 @@ loginForm.addEventListener("submit", submithandle);
 > ```ㅁㅁㅁ.length```는 ㅁㅁㅁ의 길이를 숫자로 보여준다.
 
 > ```addEventListener``` 안에 있는 함수는 직접 실행하지 않는다. 브라우저를 통해 실행한다. 또한, 브라우저는 실행만 시켜주는 것이 아닌 ```event```에 대한 정보도 담아준다.
+
+> ```javascript```는 ```string```의 오타는 구분할 수 없지만, ```const(변수)```의 오타는 구분할 수 있다. 즉, 반복되는 ```string```은 ```const```를 이용하여 변수로 바꾸는 것이 좋다.
 
 # 관습
 
