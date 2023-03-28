@@ -1,12 +1,16 @@
 # 1. GitHub 명령어
-- git init (맨 처음 프로젝스 올릴 시)
+> git init (맨 처음 프로젝스 올릴 시)
+
 > git add . ('.'은 전부란 뜻)
 
 > git status (업로드 파일 확인)
 
 > git commit -m "first commit" (git commit = 히스토리 만드는 것, "" = 히스토리 이름)
-- git remote add origin git@github.com:BaadAiim/javascript.git (이 위치로 주소와 연결, 한번만 연결하면 됨)
-- git emote -v (연결확인)
+
+> git remote add origin git@github.com:BaadAiim/javascript.git (이 위치로 주소와 연결, 한번만 연결하면 됨) ```파일위치 확인하기```
+
+> git emote -v (연결확인)
+
 > git push origin master (보내기)
 
 # 2. HTML과 CSS, Java의 상관관계
@@ -720,13 +724,43 @@ loginForm.addEventListener("submit", submithandle);
 
 사이트 페이지에서 작성한 내용을 결과값으로 제출함.
 
-# 11. 그 외의 것
+# 12. LocalStorage
+
+> ```localStorage```브라우저에 무언가를 저장한 후 나중에 가져올 수 있으며 종류는 총 3가지이다.
+
+> ```localStorage.setliem("항목", "저장하고자 하는 내용");```
+
+> ```localStorage.getliem("저장한 내용이 들어있는 항목");```
+
+> ```localStorage.removeliem("삭제하고자 하는 내용이 들어있는 항목");```
+
+ex)
+```javascript
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_USERNAME = "hidden";
+
+function submithandle(event) {
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_USERNAME);
+    const username = loginInput.value;
+    localStorage.setItem("username", username); ------------------------> 이것임
+    greeting.innerText = `Hello ${username} you can do it`;
+    greeting.classList.remove(HIDDEN_USERNAME);
+}
+
+loginForm.addEventListener("submit", submithandle);
+```
+
+# 그 외의 것
 
 > ```ㅁㅁㅁ.length```는 ㅁㅁㅁ의 길이를 숫자로 보여준다.
 
 > ```addEventListener``` 안에 있는 함수는 직접 실행하지 않는다. 브라우저를 통해 실행한다. 또한, 브라우저는 실행만 시켜주는 것이 아닌 ```event```에 대한 정보도 담아준다.
 
-# 12. 관습
+# 관습
 
 > ```const```를 통해 변수선언을 진행할 때 일반적으로 ```string```만 포함된 변수는 대문자로 표기하고 ```string```을 저장하고 싶을 때 사용한다. 또한, 중요한 정보를 담은게 아니라서 대문자로 작성한다.
 
@@ -748,3 +782,4 @@ greeting.innerText = "Hello " + username + " you can do it"; -----------> 2번
 - 결과값
 
 둘 다 똑같이 나온다.
+
