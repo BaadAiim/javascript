@@ -1,12 +1,11 @@
-const clock = document.querySelector("#clock");
+const 로그인_폼 = document.querySelector("#로그인_폼");
+const 로그인_정보 = document.querySelector("#로그인_폼 input");
+const 두번째 = document.querySelector("#숨기기");
 
-function getClock() {
-    const date = new Date();
-    const hours = String(date.getHours()).padStart(2, "0");
-    const minutes = String(date.getMinutes()).padStart(2, "0");
-    const seconds = String(date.getSeconds()).padStart(2, "0");
-    clock.innerText = `${hours}:${minutes}:${seconds}`;
+
+function 서브밋핸들(event) {
+    event.preventDefault();
+    console.log(로그인_폼);
 }
 
-getClock()
-setInterval(getClock, 1000);
+로그인_폼.addEventListener("submit", 서브밋핸들);
