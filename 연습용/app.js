@@ -1,11 +1,11 @@
 const 로그인_폼 = document.querySelector("#로그인_폼");
 const 로그인_정보 = document.querySelector("#로그인_폼 input");
-const 두번째 = document.querySelector("#숨기기");
+const 버튼 = document.querySelector("#로그인_폼 button");
 
-
-function 서브밋핸들(event) {
-    event.preventDefault();
-    console.log(로그인_폼);
+function 버튼function() {
+   const 정보 = 로그인_정보.value;
+   console.log(정보);
 }
 
-로그인_폼.addEventListener("submit", 서브밋핸들);
+
+버튼.addEventListener("click", 버튼function);
